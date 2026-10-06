@@ -87,14 +87,14 @@
       {
         "id": "fries",
         "name": " SIMPLE FRIES / MASALA FRIES",
-        "price": 105000,
+        "price": 100,
         "icon": "fries"
       },
       {
         "id": "loadedFries",
         "name": "LOADED PIZZA FRIES",
         "price": 350,
-        "icon": "loaded fries"
+        "icon": "fries"
       },
       {
         "id": "lays",
