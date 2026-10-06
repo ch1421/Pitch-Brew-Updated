@@ -75,24 +75,24 @@
       {
         "id": "chai",
         "name": "CHAI",
-        "price": 50,
+        "price": 80,
         "icon": "chai"
       },
       {
         "id": "paratha",
         "name": "PARATHA",
-        "price": 50,
+        "price": 200,
         "icon": "paratha"
       },
       {
         "id": "fries",
-        "name": "FRIES",
+        "name": " SIMPLE FRIES / MASALA FRIES",
         "price": 100,
         "icon": "fries"
       },
       {
         "id": "loadedFries",
-        "name": "LOADED FRIES",
+        "name": "LOADED PIZZA FRIES",
         "price": 350,
         "icon": "fries"
       },
@@ -111,13 +111,13 @@
       {
         "id": "water",
         "name": "MINERAL WATER",
-        "price": 150,
+        "price": 170,
         "icon": "water"
       },
       {
         "id": "juice",
-        "name": "JUICE",
-        "price": 150,
+        "name": "JUICE (1L)",
+        "price": 170,
         "icon": "juice"
       }
     ]
