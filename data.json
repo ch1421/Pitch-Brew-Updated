@@ -75,19 +75,19 @@
       {
         "id": "chai",
         "name": "CHAI",
-        "price": 50,
+        "price": 80,
         "icon": "chai"
       },
       {
         "id": "paratha",
         "name": "PARATHA",
-        "price": 50,
+        "price": 200,
         "icon": "paratha"
       },
       {
         "id": "fries",
-        "name": "FRIES",
-        "price": 100,
+        "name": "SIMPLE FRIES",
+        "price": 100 (min),
         "icon": "fries"
       },
       {
