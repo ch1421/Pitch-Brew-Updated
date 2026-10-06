@@ -91,6 +91,12 @@
         "icon": "fries"
       },
       {
+        "id": "loaded fries",
+        "name": "LOADED FRIES",
+        "price": 500,
+        "icon": "loaded fries"
+      },
+      {
         "id": "lays",
         "name": "LAYS",
         "price": 70,
@@ -114,12 +120,6 @@
         "price": 150,
         "icon": "juice"
       }
-      {
-        "id": "loaded fries",
-        "name": "LOADED FRIES",
-        "price": 500,
-        "icon": "loaded fries"
-      },
     ]
   },
   "contact": {
