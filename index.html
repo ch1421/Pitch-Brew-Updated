@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#030303">
+<title>PITCH&BREW</title>
+<link rel="stylesheet" href="./style.css?v=2">
+</head>
+<body>
+<div id="splashScreen"><div class="splash-content"><div class="splash-line"></div><h1 class="brand-logo splash-brand" data-brand>PITCH<span>&</span>BREW</h1><p class="splash-subtitle" data-splash-subtitle>MULTI SPORTS ARENA</p><div class="splash-line"></div></div></div>
+<main id="app">
+<header class="top-header"><div class="brand-logo top-brand" data-brand>PITCH<span>&</span>BREW</div><div class="brand-tag" data-brand-tag>MULTI SPORTS ARENA</div></header>
+<section id="homePage" class="page active">
+<div class="hero"><p class="small-heading" data-home-welcome>WELCOME TO</p><h1 data-brand>PITCH<span>&</span>BREW</h1><p class="hero-text" data-hero-text>PLAY. COMPETE. WIN.</p></div>
+<div class="home-buttons">
+<button class="main-button" onclick="showPage('bookingPage')"><div class="button-icon"><svg viewBox="0 0 64 64"><path d="M12 26h40v27H12z"/><path d="M18 26V17h28v9"/><path d="M20 34h24"/><path d="M20 42h24"/></svg></div><div class="button-content"><strong data-book-button>BOOK YOUR SLOT</strong><small data-book-subtitle>Check availability & reserve</small></div><span class="arrow">›</span></button>
+<button class="main-button" onclick="showPage('cafePage')"><div class="button-icon"><svg viewBox="0 0 64 64"><path d="M13 25h37v20c0 7-7 11-18 11S13 52 13 45z"/><path d="M50 30h5c6 0 8 4 8 8s-3 8-8 8h-6"/><path d="M22 18c-4-6 5-7 1-13"/><path d="M33 18c-4-6 5-7 1-13"/><path d="M44 18c-4-6 5-7 1-13"/></svg></div><div class="button-content"><strong data-cafe-button>CAFE</strong><small data-cafe-subtitle>Chai, snacks & refreshments</small></div><span class="arrow">›</span></button>
+<button class="main-button" onclick="showPage('contactPage')"><div class="button-icon"><svg viewBox="0 0 64 64"><path d="M19 12h9l4 11-6 4c3 7 8 12 15 15l4-6 11 4v9c0 3-3 5-6 5C30 54 10 34 10 14c0-3 2-2 9-2z"/></svg></div><div class="button-content"><strong data-contact-button>CONTACT US</strong><small data-contact-subtitle>Call or WhatsApp us</small></div><span class="arrow">›</span></button>
+</div><div class="sports-strip" id="sportsStrip"></div>
+</section>
+<section id="bookingPage" class="page"><div class="page-title"><button class="back-button" onclick="showPage('homePage')">‹</button><div><p data-booking-kicker>RESERVE YOUR</p><h2 data-booking-title>SPORTS SLOT</h2></div></div>
+<div class="availability-card"><div class="availability-heading"><div><span data-live-schedule>LIVE SCHEDULE</span><h3 data-check-availability>CHECK AVAILABILITY</h3></div><div class="legend"><span><i class="dot green"></i> <span data-available-label>Available</span></span><span><i class="dot red"></i> <span data-booked-label>Booked</span></span></div></div>
+<label class="schedule-label" data-select-date>SELECT DATE</label><input id="scheduleDate" type="date"><div id="scheduleDay" class="schedule-day">Loading schedule...</div><div id="scheduleSlots" class="schedule-slots"><div class="loading-box">Loading latest schedule...</div></div></div>
+<div id="bookingFormCard" class="form-card disabled-form"><div class="selected-slot" id="selectedSlot"><span data-select-slot>SELECT AN AVAILABLE TIME ABOVE</span></div>
+<div class="input-group"><label data-name-label>FULL NAME</label><input id="name" type="text" placeholder="Enter your name" data-name-placeholder></div>
+<div class="input-group"><label data-phone-label>PHONE NUMBER</label><input id="phone" type="tel" placeholder="03XX-XXXXXXX" data-phone-placeholder></div>
+<div class="input-group"><label data-sport-label>SPORT</label><select id="sport"></select></div>
+<div class="input-group"><label data-date-label>DATE</label><input id="date" type="date" readonly></div>
+<div class="two-columns"><div class="input-group"><label data-from-label>FROM</label><input id="fromTime" type="time" readonly></div><div class="input-group"><label data-to-label>TO</label><input id="toTime" type="time" readonly></div></div>
+<div class="input-group"><label data-players-label>NUMBER OF PLAYERS</label><input id="players" type="number" min="1" placeholder="e.g. 10" data-players-placeholder></div>
+<div class="input-group"><label data-message-label>ADDITIONAL MESSAGE</label><textarea id="message" rows="3" placeholder="Anything else you want to tell us?" data-message-placeholder></textarea></div>
+<button class="gold-button" onclick="sendBooking()"><span data-confirm-booking>CONFIRM BOOKING</span> <span>→</span></button></div></section>
+<section id="cafePage" class="page"><div class="page-title"><button class="back-button" onclick="showPage('homePage')">‹</button><div><p data-cafe-kicker>REFRESH &</p><h2 data-cafe-title>CAFE</h2></div></div><p class="cafe-intro" data-cafe-intro>Enjoy something delicious before or after your game.</p><div class="cafe-grid" id="cafeGrid"></div></section>
+<section id="contactPage" class="page"><div class="page-title"><button class="back-button" onclick="showPage('homePage')">‹</button><div><p data-contact-kicker>GET IN</p><h2 data-contact-title>TOUCH</h2></div></div><div class="contact-card"><div class="contact-brand brand-logo" data-brand>PITCH<span>&</span>BREW</div><p class="contact-description" data-contact-description>Have a question, want to book a slot or need more information? Get in touch with us.</p>
+<a class="contact-button" id="callButton" href="tel:03025122000"><span class="contact-icon"><svg viewBox="0 0 64 64"><path d="M19 12h9l4 11-6 4c3 7 8 12 15 15l4-6 11 4v9c0 3-3 5-6 5C30 54 10 34 10 14c0-3 2-2 9-2z"/></svg></span><div><strong data-call-title>CALL US</strong><small id="callNumber">0302-5122000</small></div><span>→</span></a>
+<a class="contact-button" id="whatsappButton" href="#" target="_blank"><span class="contact-icon"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="22"/><path d="M22 47l3-9"/><path d="M23 25c4 11 10 16 20 19"/></svg></span><div><strong data-whatsapp-title>WHATSAPP</strong><small data-whatsapp-subtitle>Chat with us</small></div><span>→</span></a>
+</div></section></main><div id="toast"></div><script src="./script.js?v=2"></script>
+</body></html>
